@@ -6,7 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 useEffect(()=>{
- const  response=fetch(`/api`, {
+ const  response=fetch(`/api/chats`, {
+    method: "POST",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(),
   })
 
   console.log(response);
